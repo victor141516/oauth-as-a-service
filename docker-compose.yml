@@ -1,0 +1,22 @@
+version: "3.7"
+
+services:
+  redis:
+    image: redis
+    hostname: redis
+    restart: always
+    networks:
+      - oauth-as-a-service
+    volumes:
+      - ./data/redis:/data
+    command: --appendonly yes
+
+  oauth-as-a-service:
+    image: victor141516/oauth-as-a-service
+    hostname: oauth-as-a-service
+    restart: always
+    networks:
+      - oauth-as-a-service
+      - caddywork
+    volumes:
+      - ./config.js:/app/config.js

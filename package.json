@@ -1,7 +1,6 @@
 {
   "name": "oauth-as-a-service",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
@@ -13,5 +12,15 @@
     "express": "^4.17.1",
     "googleapis": "^43.0.0",
     "uuid": "^3.3.3"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victor141516/oauth-as-a-service.git"
+  },
+  "bugs": {
+    "url": "https://github.com/victor141516/oauth-as-a-service/issues"
+  },
+  "homepage": "https://github.com/victor141516/oauth-as-a-service#readme",
+  "description": ""
 }
