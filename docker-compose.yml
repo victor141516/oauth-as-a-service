@@ -1,5 +1,12 @@
 version: "3.7"
 
+networks:
+  oauth-as-a-service:
+    name: oauth-as-a-service
+  caddywork:
+    name: caddywork
+    external: true
+
 services:
   redis:
     image: redis

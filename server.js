@@ -14,7 +14,12 @@ const oauth2Client = new google.auth.OAuth2(
     config.REDIRECT_URI
 );
 
-app.get('/l/:scopes?', function (req, res) {
+app.get('/', (req, res) => {
+    res.write('Easy peasy Google OAuth\n-----------------------\n\nAPI:\n - /l/<comma_separated_scopes>? : OAuth start. Returns your ID\n - /t/<id> : Generates a new access token');
+    res.end();
+});
+
+app.get('/l/:scopes?', (req, res) => {
     let scope;
     if (req.params.scopes) scope = req.params.scopes.split(',');
     else scope = ['email', 'profile', 'openid'];
@@ -49,6 +54,6 @@ app.get('/t/:id', async (req, res) => {
 });
 
 
-app.listen(config.PORT, function () {
+app.listen(config.PORT, () => {
     console.log(`Listening on port ${config.PORT}`);
 });
