@@ -1,0 +1,7 @@
+module.exports = {
+    CLIENT_ID: process.env.CLIENT_ID || 'bla',
+    CLIENT_SECRET: process.env.CLIENT_SECRET || 'bla',
+    REDIRECT_URI: process.env.REDIRECT_URI || 'bla',
+    PORT: Number.parseInt(process.env.PORT || 3000),
+    REDIS_URL: process.env.REDIS_URL || 'bla'
+}
